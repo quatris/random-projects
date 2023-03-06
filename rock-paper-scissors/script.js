@@ -8,7 +8,6 @@ else scissors
 let computerScore = 0;
 let playerScore = 0;
 
-
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
   if (randomNumber === 1) return "rock";
@@ -39,8 +38,7 @@ function playRound(playerSelection, computerSelection) {
   ) {
     computerScore++;
     return `You lose! ${playerSelection} loses to ${computerSelection}`;
-  } else
-    return `You tie! ${computerSelection} ties to ${playerSelection}`;
+  } else return `You tie! ${computerSelection} ties to ${playerSelection}`;
 }
 
 /*
@@ -57,10 +55,10 @@ else outcome = lose
 */
 
 function game() {
-    
-
   for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt("Enter rock, paper, or scissors").toLowerCase();
+    let playerSelection = prompt(
+      "Enter rock, paper, or scissors"
+    ).toLowerCase();
     let computerSelection = getComputerChoice();
 
     console.log(playRound(playerSelection, computerSelection));
