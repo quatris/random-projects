@@ -1,79 +1,71 @@
 .calculator {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
-    gap: 20px;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    font-size: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .output {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 2.5rem;
-  }
-  
-  .previous-operand {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .current-operand {
-    font-weight: bold;
-  }
-  
-  button {
-    font-size: 2rem;
-    background-color: #fff;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  
-  button:hover {
-    transform: scale(1.1);
-  }
-  
-  .operator {
-    background-color: orange;
-    color: white;
-  }
-  
-  .all-clear {
-    background-color: red;
-    color: white;
-  }
-  
-  .equal-sign {
-    background-color: green;
-    color: white;
-    grid-row: 5 / span 2;
-  }
-  
-  button[data-number] {
-    grid-column: span 1;
-  }
-  
-  button[data-operator] {
-    background-color: gray;
-    color: white;
-  }
-  
-  button[data-action="clear"] {
-    background-color: red;
-    color: white;
-  }
-  
-  button[data-action="calculate"] {
-    background-color: green;
-    color: white;
-    grid-column: span 2;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  font-size: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.display {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: right;
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button {
+  flex-basis: 20%;
+  height: 60px;
+  margin: 5px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.operator {
+  background-color: orange;
+  color: white;
+}
+
+.clear {
+  background-color: red;
+  color: white;
+}
+
+.equal {
+  background-color: green;
+  color: white;
+}
+
+.number {
+  background-color: #eee;
+}
